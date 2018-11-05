@@ -9,7 +9,7 @@
 :: the TechSupport database.
 
 ECHO Attempting to create the TechSupport database . . . 
-sqlcmd -S localhost\SQLExpress -E /i createTechSupport.sql
+sqlcmd -S MO-AXXXX-LT000 -E /i createTechSupport.sql
 ECHO.
 ECHO If no error message is shown, then the database was created successfully.
 ECHO.
