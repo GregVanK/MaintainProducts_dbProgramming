@@ -45,6 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerMaintenanceDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerMaintenanceDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerMaintenance.Designer.cs">
+      <DependentUpon>frmCustomerMaintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +75,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TechSupportDataSet2A.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCustomerMaintenance.resx">
+      <DependentUpon>frmCustomerMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +93,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CustomerMaintenanceDataset.xsc">
+      <DependentUpon>CustomerMaintenanceDataset.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerMaintenanceDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerMaintenanceDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerMaintenanceDataset.xss">
+      <DependentUpon>CustomerMaintenanceDataset.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

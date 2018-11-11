@@ -110,6 +110,7 @@
             this.maintainCustomersToolStripMenuItem.Name = "maintainCustomersToolStripMenuItem";
             this.maintainCustomersToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.maintainCustomersToolStripMenuItem.Text = "Maintain Customers";
+            this.maintainCustomersToolStripMenuItem.Click += new System.EventHandler(this.maintainCustomersToolStripMenuItem_Click);
             // 
             // maintainTechniciansToolStripMenuItem
             // 
@@ -209,7 +210,6 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(98, 17);
             this.toolStripStatusLabel1.Text = "Greg VanKampen";
-            
             // 
             // frmMain
             // 

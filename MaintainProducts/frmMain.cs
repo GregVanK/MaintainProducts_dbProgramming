@@ -34,6 +34,11 @@ namespace MaintainProducts
             productForm.Show();
         }
 
-
+        private void maintainCustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCustomerMaintenance customerForm = new frmCustomerMaintenance();
+            customerForm.MdiParent = this;
+            customerForm.Show();
+        }
     }
 }
