@@ -31,7 +31,11 @@ namespace MaintainProducts
             this.statesTableAdapter.Fill(this.customerMaintenanceDataset.States);
             // TODO: This line of code loads data into the 'customerMaintenanceDataset.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.customerMaintenanceDataset.Customers);
-
+            //Binding b =  new Binding("Value",customerMaintenanceDataset,"")
+            Binding b = zipCodeTextBox.DataBindings["Text"];
+            b.Format += FormatZipCode;
+            b.Parse += UnFormatZipCode;
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -49,6 +53,42 @@ namespace MaintainProducts
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+        private void FormatZipCode(object sender, ConvertEventArgs e) {
+            String modifiedZip = "";
+            if (e.Value.GetType().ToString() == "System.String")
+            {
+                modifiedZip = e.Value.ToString();
+                if (modifiedZip.Length > 5)
+                {
+                    modifiedZip = modifiedZip.Substring(0, 5) + "-" + modifiedZip.Substring(5);
+                    e.Value = modifiedZip;
+                }
+            }
+        }
+        private void UnFormatZipCode(object sender, ConvertEventArgs e)
+        {
+            String modifiedZip = "";
+            if (e.Value.GetType().ToString() == "System.String")
+            {
+                modifiedZip = e.Value.ToString();
+                //for (int i = 0; i < modifiedZip.Length; i++)
+                //{
+                //    if (modifiedZip[i] == '-')
+                //    {
+                //        modifiedZip = modifiedZip.Substring(0, i) + modifiedZip.Substring(i + 1);
+                //        i--;
+                //    }
+                //}
+                modifiedZip.Replace("-", "");
+                e.Value = modifiedZip;
+            }
+            
+        }
+
+        private void zipCodeTextBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

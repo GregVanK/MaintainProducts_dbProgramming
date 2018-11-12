@@ -380,6 +380,7 @@
             this.zipCodeTextBox.Name = "zipCodeTextBox";
             this.zipCodeTextBox.Size = new System.Drawing.Size(119, 20);
             this.zipCodeTextBox.TabIndex = 12;
+            this.zipCodeTextBox.TextChanged += new System.EventHandler(this.zipCodeTextBox_TextChanged);
             // 
             // phoneTextBox
             // 
@@ -420,7 +421,7 @@
             // customerIDToolStripTextBox
             // 
             this.customerIDToolStripTextBox.Name = "customerIDToolStripTextBox";
-            this.customerIDToolStripTextBox.Size = new System.Drawing.Size(100, 23);
+            this.customerIDToolStripTextBox.Size = new System.Drawing.Size(100, 25);
             // 
             // fillByCustomerIDToolStripButton
             // 
